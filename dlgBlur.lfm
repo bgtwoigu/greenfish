@@ -1,0 +1,108 @@
+object frmBlur: TfrmBlur
+  Left = 533
+  Top = 294
+  BorderStyle = bsToolWindow
+  ClientHeight = 168
+  Height = 168
+  ClientWidth = 234
+  Width = 234
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object alGaussianRadius: TAdjustLabel
+    Left = 16
+    Top = 36
+    Width = 3
+    Height = 13
+    AttachedEdit = neGaussianRadius
+  end
+  object alBoxRadius: TAdjustLabel
+    Left = 16
+    Top = 92
+    Width = 3
+    Height = 13
+    AttachedEdit = neBoxRadius
+  end
+  object rbGaussian: TRadioButton
+    Left = 8
+    Top = 8
+    Width = 137
+    Height = 17
+    Checked = True
+    TabOrder = 0
+    TabStop = True
+    OnClick = rbClick
+  end
+  object rbBox: TRadioButton
+    Left = 8
+    Top = 64
+    Width = 137
+    Height = 17
+    TabOrder = 1
+    OnClick = rbClick
+  end
+  object neGaussianRadius: TNumberEdit
+    Left = 80
+    Top = 32
+    Width = 57
+    Height = 21
+    TabOrder = 2
+    Text = '0'
+    OnChange = neChange
+    Max = 100.000000000000000000
+    Increment = 0.250000000000000000
+  end
+  object bOK: TButton
+    Left = 152
+    Top = 24
+    Width = 75
+    Height = 25
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object bCancel: TButton
+    Left = 152
+    Top = 64
+    Width = 75
+    Height = 25
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object neBoxRadius: TNumberEdit
+    Left = 80
+    Top = 88
+    Width = 57
+    Height = 21
+    TabOrder = 5
+    Text = '1'
+    OnChange = neChange
+    Min = 1.000000000000000000
+    Max = 100.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object cbPreview: TCheckBox
+    Left = 8
+    Top = 144
+    Width = 217
+    Height = 17
+    TabOrder = 6
+    OnClick = cbPreviewClick
+  end
+  object cbToric: TCheckBox
+    Left = 8
+    Top = 120
+    Width = 217
+    Height = 17
+    TabOrder = 7
+    OnClick = cbToricClick
+  end
+end

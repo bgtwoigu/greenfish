@@ -1,0 +1,102 @@
+object frmExposure: TfrmExposure
+  Left = 317
+  Height = 105
+  Top = 327
+  Width = 273
+  BorderStyle = bsToolWindow
+  ClientHeight = 105
+  ClientWidth = 273
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '0.9.30.2'
+  object lGamma: TLabel
+    Left = 8
+    Height = 1
+    Top = 12
+    Width = 1
+    ParentColor = False
+  end
+  object lBrightness: TLabel
+    Left = 8
+    Height = 1
+    Top = 44
+    Width = 1
+    ParentColor = False
+  end
+  object tbGamma: TTrackBar
+    Left = 64
+    Height = 25
+    Top = 8
+    Width = 150
+    Frequency = 2
+    Min = -10
+    OnChange = tbGammaChange
+    Position = 0
+    TabOrder = 0
+  end
+  object neGamma: TNumberEdit
+    Left = 216
+    Height = 21
+    Top = 8
+    Width = 49
+    OnChange = neGammaChange
+    TabOrder = 1
+    Text = '1'
+    Min = 0.1
+    Max = 10
+    Increment = 0.1
+  end
+  object tbBrightness: TTrackBar
+    Left = 64
+    Height = 25
+    Top = 40
+    Width = 150
+    Frequency = 2
+    Min = -10
+    OnChange = tbBrightnessChange
+    Position = 0
+    TabOrder = 2
+  end
+  object neBrightness: TNumberEdit
+    Left = 216
+    Height = 21
+    Top = 40
+    Width = 49
+    OnChange = neBrightnessChange
+    TabOrder = 3
+    Text = '0'
+    Min = -1
+    Max = 1
+    Increment = 0.1
+  end
+  object bOK: TButton
+    Left = 112
+    Height = 25
+    Top = 72
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 4
+  end
+  object bCancel: TButton
+    Left = 192
+    Height = 25
+    Top = 72
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 5
+  end
+  object bReset: TButton
+    Left = 8
+    Height = 25
+    Top = 72
+    Width = 75
+    OnClick = bResetClick
+    TabOrder = 6
+  end
+end

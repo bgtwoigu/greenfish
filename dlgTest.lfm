@@ -1,0 +1,108 @@
+object frmTest: TfrmTest
+  Left = 346
+  Height = 500
+  Top = 192
+  Width = 786
+  ClientHeight = 500
+  ClientWidth = 786
+  Constraints.MinHeight = 150
+  Constraints.MinWidth = 200
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnHide = FormHide
+  OnResize = FormResize
+  Position = poScreenCenter
+  LCLVersion = '0.9.30.3'
+  object gb: TGroupBox
+    Left = 0
+    Height = 459
+    Top = 41
+    Width = 786
+    Align = alClient
+    ClientHeight = 441
+    ClientWidth = 782
+    TabOrder = 0
+    object pb: TDoubleBufPB
+      Left = 0
+      Height = 441
+      Top = 0
+      Width = 782
+      OnMouseDown = pbMouseDown
+      OnMouseMove = pbMouseMove
+      OnMouseUp = pbMouseUp
+      OnPaint = pbPaint
+      Align = alClient
+    end
+  end
+  object pTop: TPanel
+    Left = 0
+    Height = 41
+    Top = 0
+    Width = 786
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 41
+    ClientWidth = 786
+    TabOrder = 1
+    object sbClear: TSpeedButton
+      Left = 8
+      Height = 24
+      Top = 9
+      Width = 24
+      Flat = True
+      NumGlyphs = 0
+      OnClick = sbClearClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbBgrLoad: TSpeedButton
+      Left = 40
+      Height = 24
+      Top = 9
+      Width = 24
+      Flat = True
+      NumGlyphs = 0
+      OnClick = sbBgrLoadClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbBgrDefault: TSpeedButton
+      Left = 64
+      Height = 24
+      Top = 9
+      Width = 24
+      Flat = True
+      NumGlyphs = 0
+      OnClick = sbBgrDefaultClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object bClose: TButton
+      Left = 104
+      Height = 25
+      Top = 8
+      Width = 88
+      Cancel = True
+      Default = True
+      ModalResult = 1
+      TabOrder = 0
+    end
+  end
+  object tmCursor: TTimer
+    Enabled = False
+    Interval = 40
+    OnTimer = tmCursorTimer
+    left = 32
+    top = 128
+  end
+  object tmAni: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = tmAniTimer
+    left = 80
+    top = 128
+  end
+end

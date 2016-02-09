@@ -1,0 +1,102 @@
+object frmPrint: TfrmPrint
+  Left = 302
+  Top = 183
+  BorderStyle = bsToolWindow
+  ClientHeight = 177
+  Height = 177
+  ClientWidth = 265
+  Width = 265
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  object alCopies: TAdjustLabel
+    Left = 8
+    Top = 44
+    Width = 3
+    Height = 13
+    AttachedEdit = neCopies
+  end
+  object alZoom: TAdjustLabel
+    Left = 128
+    Top = 44
+    Width = 3
+    Height = 13
+    AttachedEdit = neZoom
+  end
+  object lCaption: TLabel
+    Left = 8
+    Top = 76
+    Width = 3
+    Height = 13
+  end
+  object bPrinterSetup: TButton
+    Left = 8
+    Top = 8
+    Width = 137
+    Height = 25
+    TabOrder = 0
+    OnClick = bPrinterSetupClick
+  end
+  object neCopies: TNumberEdit
+    Left = 64
+    Top = 40
+    Width = 57
+    Height = 21
+    TabOrder = 1
+    Text = '1'
+    Min = 1.000000000000000000
+    Max = 100.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object rgPages: TRadioGroup
+    Left = 8
+    Top = 104
+    Width = 121
+    Height = 65
+    TabOrder = 2
+  end
+  object neZoom: TNumberEdit
+    Left = 200
+    Top = 40
+    Width = 57
+    Height = 21
+    TabOrder = 3
+    Text = '100'
+    Min = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object eCaption: TEdit
+    Left = 64
+    Top = 72
+    Width = 193
+    Height = 21
+    TabOrder = 4
+  end
+  object bOk: TButton
+    Left = 160
+    Top = 112
+    Width = 75
+    Height = 25
+    Default = True
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object bCancel: TButton
+    Left = 160
+    Top = 144
+    Width = 75
+    Height = 25
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 6
+  end
+  object psd: TPrinterSetupDialog
+    Left = 168
+    Top = 8
+  end
+end

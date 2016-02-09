@@ -1,0 +1,78 @@
+object frmResProp: TfrmResProp
+  Left = 259
+  Top = 125
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsToolWindow
+  ClientHeight = 105
+  Height = 105
+  ClientWidth = 361
+  Width = 361
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object lName: TLabel
+    Left = 8
+    Top = 16
+    Width = 3
+    Height = 13
+  end
+  object lLanguage: TLabel
+    Left = 8
+    Top = 48
+    Width = 3
+    Height = 13
+  end
+  object eName: TEdit
+    Left = 88
+    Top = 12
+    Width = 265
+    Height = 21
+    TabOrder = 0
+  end
+  object neLanguage: TNumberEdit
+    Left = 296
+    Top = 44
+    Width = 57
+    Height = 21
+    TabOrder = 1
+    Text = '0'
+    OnChange = neLanguageChange
+    Max = 65535.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object cbLanguage: TComboBox
+    Left = 88
+    Top = 44
+    Width = 201
+    Height = 21
+    Style = csDropDownList
+    DropDownCount = 20
+    ItemHeight = 13
+    TabOrder = 2
+    OnChange = cbLanguageChange
+  end
+  object bOK: TButton
+    Left = 200
+    Top = 72
+    Width = 75
+    Height = 25
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object bCancel: TButton
+    Left = 280
+    Top = 72
+    Width = 75
+    Height = 25
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 4
+  end
+end

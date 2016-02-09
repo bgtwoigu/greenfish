@@ -1,0 +1,151 @@
+object frmShadow: TfrmShadow
+  Left = 491
+  Top = 228
+  BorderStyle = bsToolWindow
+  ClientHeight = 217
+  Height = 217
+  ClientWidth = 242
+  Width = 242
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object alDistance: TAdjustLabel
+    Left = 8
+    Top = 12
+    Width = 3
+    Height = 13
+    AttachedEdit = neDistance
+  end
+  object alIntensity: TAdjustLabel
+    Left = 8
+    Top = 140
+    Width = 3
+    Height = 13
+    AttachedEdit = neIntensity
+  end
+  object lColor: TLabel
+    Left = 8
+    Top = 108
+    Width = 3
+    Height = 13
+  end
+  object sColor: TShape
+    Left = 96
+    Top = 104
+    Width = 57
+    Height = 25
+    Cursor = crHandPoint
+    Brush.Color = clBlack
+    OnMouseDown = sColorMouseDown
+  end
+  object alAngle: TAdjustLabel
+    Left = 8
+    Top = 44
+    Width = 3
+    Height = 13
+    AttachedEdit = neAngle
+  end
+  object alBlur: TAdjustLabel
+    Left = 8
+    Top = 76
+    Width = 3
+    Height = 13
+    AttachedEdit = neBlur
+  end
+  object neDistance: TNumberEdit
+    Left = 96
+    Top = 8
+    Width = 57
+    Height = 21
+    TabOrder = 0
+    Text = '1'
+    OnChange = ObjectChange
+    Min = 1.000000000000000000
+    Max = 100.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object neIntensity: TNumberEdit
+    Left = 96
+    Top = 136
+    Width = 57
+    Height = 21
+    TabOrder = 1
+    Text = '1'
+    OnChange = ObjectChange
+    Min = 1.000000000000000000
+    Max = 100.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object neAngle: TNumberEdit
+    Left = 96
+    Top = 40
+    Width = 57
+    Height = 21
+    TabOrder = 2
+    Text = '0'
+    OnChange = ObjectChange
+    Min = -180.000000000000000000
+    Max = 180.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object bOK: TButton
+    Left = 160
+    Top = 104
+    Width = 75
+    Height = 25
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object bCancel: TButton
+    Left = 160
+    Top = 136
+    Width = 75
+    Height = 25
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object bReset: TButton
+    Left = 160
+    Top = 8
+    Width = 75
+    Height = 25
+    TabOrder = 5
+    OnClick = bResetClick
+  end
+  object neBlur: TNumberEdit
+    Left = 96
+    Top = 72
+    Width = 57
+    Height = 21
+    TabOrder = 6
+    Text = '0'
+    OnChange = ObjectChange
+    Max = 50.000000000000000000
+    Increment = 0.250000000000000000
+  end
+  object cbPreview: TCheckBox
+    Left = 8
+    Top = 192
+    Width = 225
+    Height = 17
+    TabOrder = 7
+    OnClick = cbPreviewClick
+  end
+  object cbToric: TCheckBox
+    Left = 8
+    Top = 168
+    Width = 225
+    Height = 17
+    TabOrder = 8
+    OnClick = ObjectChange
+  end
+end

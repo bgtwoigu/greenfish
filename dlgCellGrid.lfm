@@ -1,0 +1,177 @@
+object frmCellGrid: TfrmCellGrid
+  Left = 237
+  Top = 198
+  BorderStyle = bsToolWindow
+  ClientHeight = 177
+  Height = 177
+  ClientWidth = 337
+  Width = 337
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  object cbEnabled: TCheckBox
+    Left = 232
+    Top = 16
+    Width = 97
+    Height = 17
+    TabOrder = 0
+    OnClick = cbEnabledClick
+  end
+  object gbSize: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 217
+    Height = 49
+    TabOrder = 1
+    object alSizeX: TAdjustLabel
+      Left = 8
+      Top = 8
+      Width = 10
+      Height = 13
+      Caption = 'X:'
+      AttachedEdit = neSizeX
+    end
+    object alSizeY: TAdjustLabel
+      Left = 112
+      Top = 8
+      Width = 10
+      Height = 13
+      Caption = 'Y:'
+      AttachedEdit = neSizeY
+    end
+    object neSizeX: TNumberEdit
+      Left = 40
+      Top = 4
+      Width = 65
+      Height = 21
+      TabOrder = 0
+      Text = '0'
+      OnChange = neChange
+      Max = 1000.000000000000000000
+      Increment = 1.000000000000000000
+    end
+    object neSizeY: TNumberEdit
+      Left = 144
+      Top = 4
+      Width = 65
+      Height = 21
+      TabOrder = 1
+      Text = '0'
+      OnChange = neChange
+      Max = 1000.000000000000000000
+      Increment = 1.000000000000000000
+    end
+  end
+  object gbSpacing: TGroupBox
+    Left = 8
+    Top = 64
+    Width = 217
+    Height = 49
+    TabOrder = 2
+    object alSpacingX: TAdjustLabel
+      Left = 8
+      Top = 8
+      Width = 10
+      Height = 13
+      Caption = 'X:'
+      AttachedEdit = neSpacingX
+    end
+    object alSpacingY: TAdjustLabel
+      Left = 112
+      Top = 8
+      Width = 10
+      Height = 13
+      Caption = 'Y:'
+      AttachedEdit = neSpacingY
+    end
+    object neSpacingX: TNumberEdit
+      Left = 40
+      Top = 4
+      Width = 65
+      Height = 21
+      TabOrder = 0
+      Text = '0'
+      OnChange = neChange
+      Max = 1000.000000000000000000
+      Increment = 1.000000000000000000
+    end
+    object neSpacingY: TNumberEdit
+      Left = 144
+      Top = 4
+      Width = 65
+      Height = 21
+      TabOrder = 1
+      Text = '0'
+      OnChange = neChange
+      Max = 1000.000000000000000000
+      Increment = 1.000000000000000000
+    end
+  end
+  object gbOffset: TGroupBox
+    Left = 8
+    Top = 120
+    Width = 217
+    Height = 49
+    TabOrder = 3
+    object alOffsetX: TAdjustLabel
+      Left = 8
+      Top = 8
+      Width = 10
+      Height = 13
+      Caption = 'X:'
+      AttachedEdit = neOffsetX
+    end
+    object alOffsetY: TAdjustLabel
+      Left = 112
+      Top = 8
+      Width = 10
+      Height = 13
+      Caption = 'Y:'
+      AttachedEdit = neOffsetY
+    end
+    object neOffsetX: TNumberEdit
+      Left = 40
+      Top = 4
+      Width = 65
+      Height = 21
+      TabOrder = 0
+      Text = '0'
+      OnChange = neChange
+      Increment = 1.000000000000000000
+    end
+    object neOffsetY: TNumberEdit
+      Left = 144
+      Top = 4
+      Width = 65
+      Height = 21
+      TabOrder = 1
+      Text = '0'
+      OnChange = neChange
+      Increment = 1.000000000000000000
+    end
+  end
+  object bOK: TButton
+    Left = 232
+    Top = 104
+    Width = 99
+    Height = 25
+    Default = True
+    ModalResult = 1
+    TabOrder = 4
+  end
+  object bCancel: TButton
+    Left = 232
+    Top = 144
+    Width = 99
+    Height = 25
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 5
+  end
+end

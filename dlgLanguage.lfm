@@ -1,0 +1,51 @@
+object frmLanguage: TfrmLanguage
+  Left = 283
+  Height = 369
+  Top = 243
+  Width = 337
+  BorderStyle = bsToolWindow
+  ClientHeight = 369
+  ClientWidth = 337
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Position = poScreenCenter
+  LCLVersion = '0.9.30.2'
+  object lLangPack: TLabel
+    Left = 8
+    Height = 1
+    Top = 12
+    Width = 1
+    ParentColor = False
+  end
+  object bOK: TButton
+    Left = 176
+    Height = 25
+    Top = 336
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object bCancel: TButton
+    Left = 256
+    Height = 25
+    Top = 336
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object lb: TListBox
+    Left = 8
+    Height = 297
+    Top = 32
+    Width = 321
+    Columns = 2
+    ItemHeight = 22
+    OnDblClick = lbDblClick
+    OnDrawItem = lbDrawItem
+    Style = lbOwnerDrawFixed
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,446 @@
+object ColorFrame: TColorFrame
+  Left = 0
+  Height = 361
+  Top = 0
+  Width = 192
+  ClientHeight = 361
+  ClientWidth = 192
+  LCLVersion = '1.1'
+  OnMouseMove = FormMouseMove
+  TabOrder = 0
+  DesignLeft = 780
+  DesignTop = 174
+  object sbTransparent: TSpeedButton
+    Left = 160
+    Height = 24
+    Top = 8
+    Width = 24
+    Flat = True
+    OnClick = sbTransparentClick
+    OnMouseMove = ControlMouseMove
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object sbInverted: TSpeedButton
+    Left = 160
+    Height = 24
+    Top = 32
+    Width = 24
+    Flat = True
+    OnClick = sbInvertedClick
+    OnMouseMove = ControlMouseMove
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object sbSwapColors: TSpeedButton
+    Left = 68
+    Height = 24
+    Top = 8
+    Width = 24
+    Flat = True
+    OnClick = sbSwapColorsClick
+    OnMouseMove = ControlMouseMove
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object sbDefault: TSpeedButton
+    Left = 68
+    Height = 24
+    Top = 32
+    Width = 24
+    Flat = True
+    OnClick = sbDefaultClick
+    OnMouseMove = ControlMouseMove
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object pc: TPageControl
+    Left = 4
+    Height = 169
+    Top = 64
+    Width = 177
+    ActivePage = tsSwatches
+    ShowTabs = False
+    TabIndex = 1
+    TabOrder = 0
+    object tsHSBMap: TTabSheet
+      ClientHeight = 644
+      ClientWidth = 676
+      object HSBMap: THSBMap
+        Cursor = 2340
+        Left = 0
+        Height = 161
+        Top = 0
+        Width = 169
+        BBarSize = 10
+        SelColor = clBlack
+        OnChange = HSBMapChange
+        OnMouseMove = ControlMouseMove
+        Align = alClient
+      end
+    end
+    object tsSwatches: TTabSheet
+      ClientHeight = 644
+      ClientWidth = 676
+      ImageIndex = 1
+      object sbSwatchLoad: TSpeedButton
+        Left = 146
+        Height = 22
+        Top = 8
+        Width = 23
+        Flat = True
+        OnClick = sbSwatchLoadClick
+        OnMouseMove = ControlMouseMove
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object sbSwatchSave: TSpeedButton
+        Left = 146
+        Height = 22
+        Top = 32
+        Width = 23
+        Flat = True
+        OnClick = sbSwatchSaveClick
+        OnMouseMove = ControlMouseMove
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object Swatches: TColorSwatches
+        Cursor = 2340
+        Left = 0
+        Height = 145
+        Top = 8
+        Width = 145
+        Rows = 16
+        Cols = 16
+        ColorsUsed = 256
+        DrawGrid = False
+        ParentShowHint = False
+        OnSelect = SwatchesSelect
+        OnEditing = SwatchesEditing
+        OnMouseMove = SwatchesMouseMove
+        OnMouseLeave = SwatchesMouseLeave
+      end
+    end
+  end
+  object pbForeColor: TDoubleBufPB
+    Cursor = crHandPoint
+    Left = 8
+    Height = 49
+    Top = 8
+    Width = 57
+    OnClick = pbColorClick
+    OnMouseMove = ControlMouseMove
+    OnPaint = pbColorPaint
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object pbBackColor: TDoubleBufPB
+    Tag = 1
+    Cursor = crHandPoint
+    Left = 96
+    Height = 49
+    Top = 8
+    Width = 57
+    OnClick = pbColorClick
+    OnMouseMove = ControlMouseMove
+    OnPaint = pbColorPaint
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object pRGBA: TPanel
+    Left = 0
+    Height = 129
+    Top = 232
+    Width = 192
+    BevelOuter = bvNone
+    ClientHeight = 129
+    ClientWidth = 192
+    TabOrder = 3
+    object lRed: TAdjustLabel
+      Left = 8
+      Height = 1
+      Top = 8
+      Width = 1
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      OnMouseMove = ControlMouseMove
+      AttachedEdit = neRed
+    end
+    object lGreen: TAdjustLabel
+      Left = 8
+      Height = 1
+      Top = 32
+      Width = 1
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      OnMouseMove = ControlMouseMove
+      AttachedEdit = neGreen
+    end
+    object lBlue: TAdjustLabel
+      Left = 8
+      Height = 1
+      Top = 56
+      Width = 1
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      OnMouseMove = ControlMouseMove
+      AttachedEdit = neBlue
+    end
+    object lAlpha: TAdjustLabel
+      Left = 8
+      Height = 1
+      Top = 80
+      Width = 1
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      OnMouseMove = ControlMouseMove
+      AttachedEdit = neAlpha
+    end
+    object lHTML: TLabel
+      Left = 8
+      Height = 16
+      Top = 104
+      Width = 37
+      Caption = 'HTML:'
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      OnMouseMove = ControlMouseMove
+    end
+    object imWCP: TImage
+      Cursor = crHandPoint
+      Left = 152
+      Height = 17
+      Top = 104
+      Width = 33
+      Center = True
+      OnClick = imWCPClick
+      OnMouseMove = ControlMouseMove
+      ParentShowHint = False
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869636F04000089504E47
+        0D0A1A0A0000000D494844520000001C0000001208060000004807BEE4000004
+        364944415438CBBD95CD6E1C451485BFFAE9EA9E9E6E7B321E1BCB716227B120
+        10886209098194EC9078005820DE20AF80C4322F91054B362C83C48205284248
+        89841239104CE4C489651B8FE399B1673CD3EEEEEA6251639B44AC539B2AF5AD
+        BAE7DE734E558BF5E7CF1D6F70E8E345777FC0EAFA26BFFEFE989FEF3D6298E5
+        84264008C16492D26A3448E23A5AA9F1090180036C6529CA82C1E1902CCBC88E
+        8E88C2006302AE7F7899E5F72E727EB6C54452431785C539C76E779F7B2B4FF8
+        EE87BB647901C0643D01A0CC1D36B7B878401C48722738F05BA884A4AA2A6C65
+        196519799ED31F8D7C374AB1DDEEA095A25E0BA945E6B4C3FF1B13B59AEFA2AA
+        181EF4084B4B33809E953C39F07B4AA9104890625C018C0A5F4DAA145A2BDC31
+        15FFA514C039A89C8FD495A6D7EDF8A4B6E0EB4B21CB53865A1CA203C583AE4F
+        7A6BB54FBF9F9D508C1054E3F55B8BB3743B7DAAAAC28D115F05042A047961FD
+        07EBE77A95712DADD1A86784CD012A2AD8D8AA00F8FCE6128FFFEAB0B65AD03F
+        52984642FBFE2600F71F3C666E769AD25638E7F3EB63FD1D12907E560A8B86B1
+        41AE063DA2C16F984B102D5A54021B7F2C02F0D1FC1661BA4E34DF65F5C524DD
+        67F3E44EFA829562302A292B77C29C46F8D60402211542195015564798CA77F8
+        713CA06334CF5E2ADE9E2E68CE0AE4D9790066EAD39436A7D718B0DDE9D1EE36
+        C14C9FD22B8331C5E2354A8540488D0A22141AA302747104C0F7E90D7E6ABECB
+        FB8B73FCB2DB66F7C73B5CFF72168024AC533709491891460EDB6B11C5930064
+        D6A28D41480DE204508CF10452690253C35062900449E44D73E55366CEB5585A
+        6AF1C1C227DC717DD61EAE7A9D1EEE9036335EECA4F4365A10CC10497F4EDA1C
+        63344A05DEC988D30E85902815A07548E4345011254DEFF43CA7332AD8D9CF98
+        EA8C48AB35BEB9B90C4067E76FDADB2BB4DED9E4DBBB97B9DD3F4385D7DEE419
+        3AD048A9417A5DB538419448A9D13AC45625028B892600C80F47B4F70F596D6B
+        F6DADB7CB6D085D10A00AD789BE6DC26D9C6807BED8BE8DA24637F503887D20A
+        2135028938A15478D348E53514454610C554DA782DFA3B8CB23D5606339CB17B
+        DCFAEA290C737F73B21EF9EE3E5B5B214FB273E8B881CD7D8CA30CA135526984
+        1420C4A94B1102A114CA448461EAA91CD310D726B1465356194E0FD9DBD8230A
+        5F7AC0C382E2C072F79FAB94C90C4625C0E189174D9420830021E4AB2E15D2BB
+        5406064A479A4C901B0FECEA31C411220A188A05BEF873912BEA917769D5637D
+        D862BDB884692488DC91BAD23F6D7317B0DA217508E235D3785EC53860C94D4A
+        BDE629ED1B03518D2889096A86C0B5785A5EF03A9596A3C422B3129715448C20
+        F319FB33B34C0CF7FD03727C2DB4F2AD4E4DD4585E9AA62C2B567605B93D2DE5
+        DA428395838A24D1447543A8229C8B710E32EB188D72CAE1908BA6626D4FC354
+        4AA405335A70E3DA79AE9E8D994A0D81168837FD03FE17787EB154BA74068000
+        00000049454E44AE426082
+      }
+      ShowHint = True
+    end
+    object sbRed: TPaintScrollBar
+      Cursor = 2340
+      Left = 24
+      Height = 17
+      Top = 8
+      Width = 121
+      MinValue = 0
+      MaxValue = 255
+      Position = 0
+      OnChange = sbRGBAChange
+      OnPaint = sbRGBPaint
+      ShowHint = True
+      ParentShowHint = False
+      OnMouseMove = ControlMouseMove
+    end
+    object sbGreen: TPaintScrollBar
+      Tag = 8
+      Cursor = 2340
+      Left = 24
+      Height = 17
+      Top = 32
+      Width = 121
+      MinValue = 0
+      MaxValue = 255
+      Position = 0
+      OnChange = sbRGBAChange
+      OnPaint = sbRGBPaint
+      ShowHint = True
+      ParentShowHint = False
+      OnMouseMove = ControlMouseMove
+    end
+    object sbBlue: TPaintScrollBar
+      Tag = 16
+      Cursor = 2340
+      Left = 24
+      Height = 17
+      Top = 56
+      Width = 121
+      MinValue = 0
+      MaxValue = 255
+      Position = 0
+      OnChange = sbRGBAChange
+      OnPaint = sbRGBPaint
+      ShowHint = True
+      ParentShowHint = False
+      OnMouseMove = ControlMouseMove
+    end
+    object sbAlpha: TPaintScrollBar
+      Tag = 24
+      Cursor = 2340
+      Left = 24
+      Height = 17
+      Top = 80
+      Width = 121
+      MinValue = 0
+      MaxValue = 255
+      Position = 0
+      OnChange = sbRGBAChange
+      OnPaint = sbAlphaPaint
+      ShowHint = True
+      ParentShowHint = False
+      OnMouseMove = ControlMouseMove
+    end
+    object neRed: TNumberEdit
+      Left = 152
+      Height = 23
+      Top = 6
+      Width = 33
+      OnChange = neRGBAChange
+      OnMouseMove = ControlMouseMove
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      Text = '0'
+      Min = 0
+      Max = 255
+      Increment = 1
+    end
+    object neGreen: TNumberEdit
+      Tag = 8
+      Left = 151
+      Height = 23
+      Top = 30
+      Width = 33
+      OnChange = neRGBAChange
+      OnMouseMove = ControlMouseMove
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      Text = '0'
+      Min = 0
+      Max = 255
+      Increment = 1
+    end
+    object neBlue: TNumberEdit
+      Tag = 16
+      Left = 151
+      Height = 23
+      Top = 54
+      Width = 33
+      OnChange = neRGBAChange
+      OnMouseMove = ControlMouseMove
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+      Text = '0'
+      Min = 0
+      Max = 255
+      Increment = 1
+    end
+    object neAlpha: TNumberEdit
+      Tag = 24
+      Left = 151
+      Height = 23
+      Top = 78
+      Width = 33
+      OnChange = neRGBAChange
+      OnMouseMove = ControlMouseMove
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 7
+      Text = '0'
+      Min = 0
+      Max = 255
+      Increment = 1
+    end
+    object eHTML: TEdit
+      Left = 48
+      Height = 21
+      Top = 100
+      Width = 97
+      Font.Color = 27607
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      OnChange = eHTMLChange
+      OnMouseMove = ControlMouseMove
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 8
+    end
+  end
+  object iNextPage: TImage
+    Cursor = crHandPoint
+    Left = 180
+    Height = 170
+    Top = 64
+    Width = 12
+    Center = True
+    OnMouseDown = iNextPageMouseDown
+    OnMouseMove = ControlMouseMove
+    ParentShowHint = False
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869631501000089504E47
+      0D0A1A0A0000000D4948445200000006000000280806000000DD6A8B0E000000
+      DC4944415428CFED90CD4A026118859FF9ECC3C1CD8021824AD022A45D108191
+      0329C82CB29F956DA44B095A752F4D5E86B8B241308A226795E8250C03EFEB42
+      9042776D5A7896E7E12CCE83E779FB6C882955F626D6DAA335502896A89D9D47
+      6BD06FB4F46534D6A07DA33FA101C86577E88521CDA0BD5A1A55C5711C72D90C
+      BDF089667011596BEB4645101196CB0CF70F8FE4770BCF465449D3145565107D
+      D0ED5CC5F3D9F4D8A82A4992D01FBED3ED5CC6F1D7A70F7C1B11217A9D70777B
+      BD2A013839F5F5A07AF806947FFD705D7704E4F97BB676B776FF85DD0501F2E3
+      6E40CAC50D0000000049454E44AE426082
+    }
+    ShowHint = True
+  end
+  object odSwatches: TOpenDialog
+    Filter = 'Swatch preset files (*.swa)|*.swa'
+    Options = [ofHideReadOnly, ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    left = 52
+    top = 128
+  end
+  object sdSwatches: TSaveDialog
+    DefaultExt = '.swa'
+    Filter = 'Swatch preset files (*.swa)|*.swa'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
+    left = 52
+    top = 182
+  end
+end

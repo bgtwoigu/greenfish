@@ -1,0 +1,105 @@
+object frmHueSaturation: TfrmHueSaturation
+  Left = 345
+  Top = 285
+  BorderStyle = bsToolWindow
+  ClientHeight = 137
+  Height = 137
+  ClientWidth = 273
+  Width = 273
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object alHue: TAdjustLabel
+    Left = 8
+    Top = 12
+    Width = 3
+    Height = 13
+    AttachedEdit = neHue
+  end
+  object alSat: TAdjustLabel
+    Left = 8
+    Top = 60
+    Width = 3
+    Height = 13
+    AttachedEdit = neSat
+  end
+  object sbHue: TPaintScrollBar
+    Left = 8
+    Top = 32
+    Width = 257
+    Height = 17
+    MinValue = -50
+    MaxValue = 50
+    Position = 0
+    OnChange = sbChange
+    OnPaint = sbHuePaint
+  end
+  object sbSat: TPaintScrollBar
+    Left = 8
+    Top = 80
+    Width = 257
+    Height = 17
+    MinValue = -10
+    MaxValue = 10
+    Position = 0
+    OnChange = sbChange
+    OnPaint = sbSatPaint
+  end
+  object neHue: TNumberEdit
+    Left = 120
+    Top = 8
+    Width = 49
+    Height = 21
+    TabOrder = 2
+    Text = '0'
+    OnChange = neChange
+    Min = -50.000000000000000000
+    Max = 50.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object neSat: TNumberEdit
+    Left = 120
+    Top = 56
+    Width = 49
+    Height = 21
+    TabOrder = 3
+    Text = '0'
+    OnChange = neChange
+    Min = -10.000000000000000000
+    Max = 10.000000000000000000
+    Increment = 1.000000000000000000
+  end
+  object bOK: TButton
+    Left = 112
+    Top = 104
+    Width = 75
+    Height = 25
+    Default = True
+    ModalResult = 1
+    TabOrder = 4
+  end
+  object bCancel: TButton
+    Left = 192
+    Top = 104
+    Width = 75
+    Height = 25
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 5
+  end
+  object bReset: TButton
+    Left = 8
+    Top = 104
+    Width = 75
+    Height = 25
+    TabOrder = 6
+    OnClick = bResetClick
+  end
+end
